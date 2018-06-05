@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<block>
+  <name>amp_vector_cc</name>
+  <key>tutorial_amp_vector_cc</key>
+  <category>[tutorial]</category>
+  <import>import tutorial</import>
+  <make>tutorial.amp_vector_cc($vec_size, $multiple)</make>
+  <param>
+    <name>Multiple</name>
+    <key>multiple</key>
+    <type>float</type>
+  </param>
+    <param>
+    <name>Vector Length</name>
+    <key>vec_size</key>
+    <type>int</type>
+  </param>
+  <sink>
+    <name>in</name>
+    <type>complex</type>
+    <vlen>$vec_size</vlen>
+  </sink>
+  <source>
+    <name>out</name>
+    <type>complex</type>
+    <vlen>$vec_size</vlen>
+  </source>
+</block>
+

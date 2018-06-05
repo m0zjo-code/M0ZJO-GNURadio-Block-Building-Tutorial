@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<block>
+  <name>fft_calc</name>
+  <key>tutorial_fft_calc</key>
+  <category>[tutorial]</category>
+  <import>import tutorial</import>
+  <make>tutorial.fft_calc($fwd_rev)</make>
+  <!-- Make one 'param' node for every Parameter you want settable from the GUI.
+       Sub-nodes:
+       * name
+       * key (makes the value accessible as $keyname, e.g. in the make node)
+       * type -->
+  <param>
+      <name>Direction</name>
+      <key>fwd_rev</key>
+      <value>True</value>
+      <type>enum</type>
+        <option>
+            <name>Forward</name>
+            <key>True</key>
+        </option>
+        <option>
+            <name>Reverse</name>
+            <key>False</key>
+        </option>
+    </param>
+
+  <!-- Make one 'sink' node per input. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+  <sink>
+    <name>msg_in</name>
+    <type>message</type>
+  </sink>
+
+  <!-- Make one 'source' node per output. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+  <source>
+    <name>msg_out</name>
+    <type>message</type>
+  </source>
+</block>

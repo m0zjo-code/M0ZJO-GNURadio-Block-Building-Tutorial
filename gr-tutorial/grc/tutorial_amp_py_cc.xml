@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<block>
+  <name>amp_py_cc</name>
+  <key>tutorial_amp_py_cc</key>
+  <category>[tutorial]</category>
+  <import>import tutorial</import>
+  <make>tutorial.amp_py_cc($multiple)</make>
+  <!-- Make one 'param' node for every Parameter you want settable from the GUI.
+       Sub-nodes:
+       * name
+       * key (makes the value accessible as $keyname, e.g. in the make node)
+       * type -->
+  <param>
+    <name>Multiple</name>
+    <key>multiple</key>
+    <type>float</type>
+  </param>
+
+  
+  <sink>
+    <name>in</name>
+    <type>complex</type>
+  </sink>
+  <source>
+    <name>out</name>
+    <type>complex</type>
+  </source>
+</block>
